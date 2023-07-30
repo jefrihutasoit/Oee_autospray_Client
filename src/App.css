@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.test{
+  color: rgb(111, 45, 211);
+}
+
+.blink{
+  animation: blink_exec 1s linear infinite;
+}
+
+@keyframes blink_exec{
+  0%{opacity: 1;}
+  50%{opacity: 0.5;}
+  100%{opacity: 0;}
+}

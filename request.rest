@@ -1,0 +1,58 @@
+    POST http://localhost:8001/push_data 
+    Content-Type: application/json
+
+    [{
+        "id_identification" : "CHN01",
+        "status":"Run"
+    }]
+
+###
+GET http://localhost:8001/get-machine
+
+###
+GET http://localhost:8001/get-machine/7
+
+###
+POST http://localhost:8001/register-machine 
+
+Content-Type: application/json
+{
+    "original_name": "STN MACHINE",
+    "Number": "STN01",
+    "id_identification": "STN01",
+    "line_location": "Cold F Line",
+    "ip_address": "192.168.1.2",
+    "port_adr": "8000",
+    "status" : "Run",
+    "updated_at": "",
+    "total_run" : 0,
+    "total_stop" :0,
+    "total_alarm" : 0,
+    "total_unknown": 0,
+    "group": "5"
+}
+
+###
+POST  http://localhost:8001/remove-machine 
+Content-Type: application/json
+
+{
+    "role":{
+
+    },
+    "data":{
+
+    }
+}
+###
+GET http://localhost:8001/current-session-data/1
+###
+GET http://localhost:8001/current-session-data-option/latest
+###
+GET http://localhost:8001/current-session-data-option/current
+
+###history data
+GET http://localhost:8001/get-history/CHN1/st/end
+
+
+
